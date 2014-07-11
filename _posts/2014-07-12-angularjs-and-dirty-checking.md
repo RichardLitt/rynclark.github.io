@@ -110,4 +110,4 @@ This is a huge advantage over setting getters/settings, as it allows for us to c
 
 ###The End
 
-This is the basics behind how dirty checking works in AngularJS. If you want to read more into this, [this is an amazing article with more detail into the other functions ran by AngularJS to do with $watch, $digest and $apply.](http://teropa.info/blog/2013/11/03/make-your-own-angular-part-1-scopes-and-digest.html)
+This is the basics behind how dirty checking works in AngularJS. If you want to read more into this, <a href="http://teropa.info/blog/2013/11/03/make-your-own-angular-part-1-scopes-and-digest.html" target="_blank">this is an amazing article with more detail into the other functions ran by AngularJS to do with $watch, $digest and $apply.</a>
