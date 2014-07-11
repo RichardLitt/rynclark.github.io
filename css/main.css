@@ -2013,14 +2013,11 @@ h1 {
     .sidebar header {
       overflow: hidden; }
     .sidebar .main__logo {
-      float: left;
       height: 50px !important;
-      background-position: 50% -160px !important; }
+      background-position: 50% -160px !important;
+      margin: 0 auto; }
     .sidebar .me {
-      width: 46px !important;
-      height: 46px !important;
-      margin: -5px 10px 0 10px !important;
-      float: left; }
+      display: none !important; }
     .sidebar ul {
       overflow: hidden; }
       .sidebar ul li {
@@ -2031,4 +2028,5 @@ h1 {
           border-bottom: none !important;
           padding: 3px !important; }
   .content {
-    margin: 0; } }
+    margin: 0;
+    width: 100%; } }

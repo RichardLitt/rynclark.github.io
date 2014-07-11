@@ -276,19 +276,15 @@ h1 {
 
 		}
 		.main__logo {
-			float: left;
 			height: 50px !important;
 
 			background-position: 50% -160px !important;
+
+			margin: 0 auto;
 		}
 
 		.me {
-			width: 46px !important;
-			height: 46px !important;
-
-			margin: -5px 10px 0 10px !important;
-
-			float: left;
+			display: none !important;
 		}
 
 		ul {
@@ -306,5 +302,7 @@ h1 {
 
 	.content {
 		margin: 0;
+
+		width: 100%
 	}
 }
