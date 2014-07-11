@@ -178,6 +178,10 @@ h1 {
 			line-height: 26px;
 		}
 
+		p + p {
+			margin-top: 10px;
+		}
+
 		a {
 			color: rgba( 0, 0, 0, 0.9 );
 			font-weight: bold;

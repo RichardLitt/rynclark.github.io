@@ -1957,6 +1957,8 @@ h1 {
       font-size: 24px; }
     .content article.post p {
       line-height: 26px; }
+    .content article.post p + p {
+      margin-top: 10px; }
     .content article.post a {
       color: rgba(0, 0, 0, 0.9);
       font-weight: bold; }
