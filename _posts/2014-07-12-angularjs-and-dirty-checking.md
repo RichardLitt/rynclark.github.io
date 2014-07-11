@@ -107,7 +107,3 @@ $scope.$watch( function() {
 In the example `ng-model` directive, when the input's value is updated, the $scope value is updated to match. The digests are then ran - comparing `$scope.name` to it's previously known value (possibly `undefined` if it hasn't been set), which in return fires the listener event, which logs the fact the input has been updated to the console.
 
 This is a huge advantage over setting getters/settings, as it allows for us to call the watch function on unknown variables and have the listener functions ran as soon as the variable exists.
-
-###The End
-
-This is the basics behind how dirty checking works in AngularJS. If you want to read more into this, <a href="http://teropa.info/blog/2013/11/03/make-your-own-angular-part-1-scopes-and-digest.html" target="_blank">this is an amazing article with more detail into the other functions ran by AngularJS to do with $watch, $digest and $apply.</a>
