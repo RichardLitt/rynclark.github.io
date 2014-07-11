@@ -2006,6 +2006,9 @@ h1 {
           left: 13px; }
 
 @media only screen and (max-width: 680px) {
+  pre {
+    width: 100%;
+    word-wrap: break-word; }
   .sidebar {
     position: static;
     width: 100%;
