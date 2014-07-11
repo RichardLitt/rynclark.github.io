@@ -59,6 +59,11 @@ gulp.task('images', function () {
     .pipe(gulp.dest('_site/img'));
 });
 
+gulp.task('fonts', function () {
+  return gulp.src('fonts/**/')
+    .pipe(gulp.dest('_site/fonts'));
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -66,6 +71,7 @@ gulp.task('images', function () {
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
     gulp.watch('img/**/*', ['images']);
+    gulp.watch('fonts/**/', ['fonts']);
     gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
@@ -73,4 +79,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['images', 'browser-sync', 'watch']);
+gulp.task('default', ['images', 'fonts', 'browser-sync', 'watch']);

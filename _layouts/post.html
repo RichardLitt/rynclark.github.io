@@ -1,9 +1,29 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<article class="post">
+	<header>
+		<h2>{{ page.title }}</h2>
+		<span class="time">{{ page.date | date_to_string }}</span>
+	</header>
+
+	<div class="post">
+	{{ content }}
+	</div>
+
+	<div class="disqus">
+		<div id="disqus_thread"></div>
+	</div>
+</article>
+
+<script>
+  var disqus_url = 'http://ryanclark.me/{{page.url}}';
+  var disqus_title = '{{page.title}}';
+  var disqus_shortname = 'rynclark';
+  (function() {
+    var dsq = document.createElement('script');
+    dsq.async = dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    document.getElementsByTagName('head')[0].appendChild(dsq);
+  })();
+</script>
