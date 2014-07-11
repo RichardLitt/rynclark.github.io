@@ -3,6 +3,8 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var imagemin   = require('gulp-imagemin');
+var newer      = require('gulp-newer');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -50,12 +52,20 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('css'));
 });
 
+gulp.task('images', function () {
+  return gulp.src('img/**/*')
+    .pipe(newer('_site/img'))
+    .pipe(imagemin())
+    .pipe(gulp.dest('_site/img'));
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
+    gulp.watch('img/**/*', ['images']);
     gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
@@ -63,4 +73,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['images', 'browser-sync', 'watch']);

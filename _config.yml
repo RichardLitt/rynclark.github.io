@@ -1,4 +1,6 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-highlighter: pygments # or rouge or null
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+auto: true
+server: true
+markdown: rdiscount
+pygments: true
+permalink: short-urls-jekyll
+paginate: 1

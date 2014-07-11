@@ -1,160 +1,137 @@
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
-
-/* Global Reset */
+/**
+ * Box Sizing
+ */
 * {
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: 0.2s;
 }
 
-html, body { height: 100%; }
+/**
+ * Base
+ */
+html {
+  font-size: 62.5%;
+
+
+  background: #f4f4f4;
+
+  overflow-y: scroll;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    background-color: black;
-    font: 13.34px Helvetica, Arial, sans-serif;
-    font-size: small;
-    text-align: center;
+  font: 300 13px/1.6 'Helvetica Neue', Arial, sans-serif;
+  color: #444;
+  position: relative;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%; }
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
-
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
-
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
-.posts {
-    list-style-type: none;
-    margin-bottom: 2em;
-}
-
-.posts li {
-    line-height: 1.75em;
-}
-
-.posts span {
-    color: #aaa;
-    font-family: Monaco, "Courier New", monospace;
-    font-size: 80%;
-}
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-.site {
-    font-size: 115%;
-    text-align: justify;
-    width: 42em;
-    margin: 3em auto 2em;
-    line-height: 1.5em;
-}
-
-.header a {
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.title {
-    display: inline-block;
-    margin-bottom: 2em;
-}
-
-.title a {
-    color: #a00;
-}
-
-.title a:hover {
-    color: #000;
-}
-
-.header a.extra {
-    color: #aaa;
-    margin-left: 1em;
-}
-
-.header a.extra:hover {
-    color: #000;
-}
-
-.meta {
-    color: #aaa;
-}
-
-.footer {
-    font-size: 80%;
-    color: #666;
-    border-top: 4px solid #eee;
-    margin-top: 2em;
-    overflow: hidden;
-}
-
-.footer .contact {
-    float: left;
-    margin-right: 3em;
-}
-
-.footer .contact a {
-    color: #8085C1;
-}
-
-.footer .rss {
-    margin-top: 1.1em;
-    margin-right: -.2em;
-    float: right;
-}
-
-.footer .rss img {
+img {
+  & a {
     border: 0;
+  }
+  vertical-align: bottom;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+input,
+button {
+  outline: 0;
+}
+input {
+  border: none;
+  background: #fff;
+  font-size: 13px;
+  padding: 6px 30px 6px 10px;
+  border-radius: 1px;
+  box-shadow: 1px 1px 3px 1px #ccc;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1288px;
+  margin: 0 auto;
+  position: relative;
+}
+p {
+  margin: 0;
+}
+.relative {
+  position: relative;
 }
 
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
+/**
+ * Headings
+ */
+h1, .alpha {
+  // @extend %heading;
+  font-size: 18px;
+  margin: 25px 0;
+}
+h2, .beta {
+  // @extend %heading;
+  font-size: 20px;
+  margin: 15px 0;
+}
+h4, .delta {
+  // @extend %heading;
 
-/* standard */
-.post pre {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .4em;
 }
 
-.post ul, .post ol {
-    margin-left: 1.35em;
+
+.flag {
+  display: table;
+  width: 100%;
 }
 
-.post code {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .2em;
+.flag__image,
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+
+  .flag--top & {
+    vertical-align: top;
+  }
+
+  .flag--bottom & {
+    vertical-align: bottom;
+  }
+
 }
 
-.post pre code {
-    border: none;
+.flag__image {
+  padding-right: 10px;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+
+  .flag--rev & {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
 }
 
-/* terminal */
-.post pre.terminal {
-    border: 1px solid #000;
-    background-color: #333;
-    color: #FFF;
-}
-
-.post pre.terminal code {
-    background-color: #333;
+.flag__body {
+  width: 100%;
 }
