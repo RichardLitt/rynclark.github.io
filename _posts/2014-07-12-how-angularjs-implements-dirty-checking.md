@@ -349,8 +349,6 @@ $scope.name = 'Ryan';
 
 var element = document.querySelectorAll('input');
 
-console.log(element);
-
 element[0].onkeyup = function() {
 	$scope.name = element[0].value;
 
@@ -371,4 +369,4 @@ var updateScopeValue = function updateScopeValue( ) {
 };
 {% endhighlight %}
 
-Perfect - using this approach we can now update the input's value and it will be reflected in `$scope.name`, as well as call `updateScopeValue` and have the input's value reflect that! <a href="http://jsfiddle.net/ryanclark/S3unb/" target="_blank">You can play around with this here.</a>
+Perfect - using this approach we can now update the input's value and it will be reflected in `$scope.name`, as well as call `updateScopeValue` and have the input's value reflect that! <a href="http://jsfiddle.net/ryanclark/S3unb/1/" target="_blank">You can play around with this here.</a>
