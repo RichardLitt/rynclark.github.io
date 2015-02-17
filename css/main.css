@@ -2021,9 +2021,10 @@ pre {
         .sidebar ul li a {
           border-bottom: none !important;
           padding: 3px !important; }
-  .content {
+  .container {
     margin: 0;
-    width: 100%; } }
+    width: 100%;
+    padding: 10px 15px; } }
 
 h1 {
   font-size: 36px;
