@@ -132,8 +132,6 @@ pre {
 
 		h2 {
 			margin: 0;
-
-			font-size: 24px;
 		}
 
 		p {
@@ -276,4 +274,31 @@ pre {
 
 		width: 100%
 	}
+}
+
+h1 {
+	font-size: 36px;
+	letter-spacing: -2px;
+	text-indent: -3px;
+}
+
+h2 {
+	font-size: 28px;
+	letter-spacing: -1px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 2rem;
 }
