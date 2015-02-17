@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "How AngularJS implements dirty checking to watch $scope variables and replicate it ourselves"
-date:   2014-07-12 19:21:00
+title:  "How AngularJS implements dirty checking and how to replicate it ourselves"
+date:   2014-07-14 14:10:32
 permalink: /how-angularjs-implements-dirty-checking
 ---
 
