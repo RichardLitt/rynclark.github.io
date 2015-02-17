@@ -8,41 +8,34 @@
 
     <title>Ryan Clark</title>
 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-
   <body>
 
-    <aside class="sidebar">
-      <header class="sidebar__header">
-        <a href="/" class="me">
-          <img src="/img/me.jpeg" />
-        </a>
-        <a href="/" class="main__logo"></a>
-      </header>
+    <header class="header">
+      <div class="header__fixed">
+        <div class="container">
+          <a href="/" class="logo">Ryan Clark</a>
 
-      <nav class="sidebar__navigation">
-        <a href="https://twitter.com/rynclark" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @rynclark</a>
-
-        <div class="about__me">
-          Front-end developer <a href="http://twitter.com/appsbroker" target="_blank">@appsbroker</a>
+          <nav class="header__navigation">
+            <ul class="header__navigation--list">
+              <li>
+                <a target="_blank" href="http://twitter.com/rynclark"><i class="fa fa-fw fa-twitter"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="http://github.com/rynclark"><i class="fa fa-fw fa-github"></i></a>
+              </li>
+            </ul>
+          </nav>
         </div>
-
-        <ul class="sidebar__navigation--list">
-          <li>
-            <a href="/">Posts</a>
-          </li>
-          <li>
-            <a href="https://github.com/rynclark" target="_blank">GitHub</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+      </div>
+    </header>
 
     <section class="content">
-
-      {{ content }}
-
+      <div class="container">
+        {{ content }}
+      </div>
     </section>
 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

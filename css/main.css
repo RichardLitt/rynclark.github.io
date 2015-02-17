@@ -1862,121 +1862,109 @@ h2, .beta {
 .fa-bomb:before {
   content: "\f1e2"; }
 
-body {
-  background: #fafafa;
-  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif; }
+html, body {
+  background: #fff;
+  font: 16px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h1 {
   margin: 0; }
 
-.sidebar {
-  background: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  z-index: 1; }
-  .sidebar .sidebar__header {
-    background: #F7F8F8;
-    padding-top: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-    .sidebar .sidebar__header .me {
-      width: 126px;
-      height: 126px;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      overflow: hidden;
-      position: relative;
-      display: block;
-      margin: 0 auto; }
-      .sidebar .sidebar__header .me img {
-        width: inherit; }
-    .sidebar .sidebar__header .main__logo {
-      background: url(../img/logo.png ) no-repeat 50% -150px;
-      width: 300px;
-      height: 60px;
-      display: block; }
-  .sidebar .sidebar__navigation {
-    margin: 20px 0 0 0; }
-    .sidebar .sidebar__navigation iframe {
-      width: 191px !important;
-      margin: 0 auto;
-      display: block; }
-    .sidebar .sidebar__navigation .about__me {
-      margin-top: 20px;
-      font-size: 14px;
-      text-align: center; }
-      .sidebar .sidebar__navigation .about__me a {
-        color: rgba(0, 0, 0, 0.8);
-        font-weight: bold;
-        text-decoration: none; }
-    .sidebar .sidebar__navigation .sidebar__navigation--list {
-      width: 222px;
-      margin: 10px auto; }
-      .sidebar .sidebar__navigation .sidebar__navigation--list li a {
-        display: block;
-        color: rgba(0, 0, 0, 0.8);
-        padding: 15px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.03); }
+.container {
+  width: 1000px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 15px 0 !important;
+  display: block; }
+
+header h2 {
+  font-size: 28px !important;
+  margin: 0px !important; }
+
+.highlight .err {
+  color: inherit;
+  background-color: transparent; }
+
+pre {
+  line-height: 26px; }
+
+.header {
+  height: 80px; }
+  .header__fixed {
+    background: #F7F7F7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    z-index: 99; }
+  .header .logo {
+    float: left;
+    display: block;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 28px;
+    margin-top: 18px; }
+  .header__navigation {
+    float: right; }
+    .header__navigation--list {
+      margin-top: 8px; }
+      .header__navigation--list li {
+        float: left;
+        margin-left: 10px; }
+        .header__navigation--list li a {
+          display: block;
+          font-size: 42px;
+          color: rgba(0, 0, 0, 0.5); }
+          .header__navigation--list li a:hover {
+            color: rgba(0, 0, 0, 0.8); }
 
 .content {
-  width: 960px;
-  background: #fff;
-  margin-left: 300px;
-  min-height: 100%;
   position: relative;
   z-index: 2;
-  overflow: hidden;
-  -webkit-box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1); }
-  .content .post__list {
-    padding: 20px 30px; }
-    .content .post__list ul li a {
+  margin: 20px auto;
+  overflow: hidden; }
+  .content .post__list ul li a {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .content .post__list ul li a .post__title {
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.8);
       display: block;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-      .content .post__list ul li a .post__title {
-        font-size: 24px;
-        color: rgba(0, 0, 0, 0.8);
-        display: block;
-        margin-bottom: 5px; }
-      .content .post__list ul li a .post__time {
-        display: block;
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.5); }
-  .content article.post {
-    padding: 20px 30px; }
-    .content article.post header {
-      margin-bottom: 15px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-    .content article.post h2 {
-      margin: 0;
-      font-size: 24px; }
-    .content article.post p {
-      line-height: 26px; }
-    .content article.post p + p {
-      margin-top: 10px; }
-    .content article.post a {
-      color: rgba(0, 0, 0, 0.9);
-      font-weight: bold; }
-    .content article.post .highlight {
-      background: rgba(0, 0, 0, 0.03);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      margin: 15px 0;
-      padding: 5px 20px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px; }
-    .content article.post .time {
+      margin-bottom: 5px; }
+    .content .post__list ul li a .post__time {
+      display: block;
       font-size: 12px;
-      color: rgba(0, 0, 0, 0.6); }
-    .content article.post .disqus {
-      margin-top: 15px; }
+      color: rgba(0, 0, 0, 0.5); }
+  .content article.post header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .content article.post h2 {
+    margin: 0;
+    font-size: 24px; }
+  .content article.post p {
+    line-height: 26px; }
+  .content article.post p + p {
+    margin-top: 10px; }
+  .content article.post a {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: bold; }
+  .content article.post .highlight {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 15px 0;
+    padding: 5px 20px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+  .content article.post .time {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6); }
+  .content article.post .disqus {
+    margin-top: 15px; }
   .content .pagination {
-    overflow: hidden;
-    margin: 0 30px 20px; }
+    overflow: hidden; }
     .content .pagination .next, .content .pagination .previous {
       background: rgba(0, 0, 0, 0.03);
       -webkit-border-radius: 3px;
@@ -2004,6 +1992,9 @@ h1 {
         .content .pagination .next.previous i, .content .pagination .previous.previous i {
           right: auto;
           left: 13px; }
+    .content .pagination .next {
+      float: right;
+      margin: 0 0 0 20px; }
 
 pre {
   width: 100%;
