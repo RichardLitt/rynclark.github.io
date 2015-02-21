@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting started with Flux - Make a simple chat application"
+title:  "Introduction to Facebook's Flux architecture"
 date:   2015-02-21 09:00:00
 permalink: /getting-started-with-flux
 ---
