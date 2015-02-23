@@ -8,7 +8,7 @@ permalink: /getting-started-with-react
 React is an insanely powerful framework by the amazing developers over at Facebook. Implementing a virtual DOM, it allows us to render components super fast whilst removing any unnecessary overhead from DOM operations. React is often said to deal with the "V" out of the MVC architecture, however when you mix this with Flux, you can have a full blown front-end framework that allows you to easily keep your model and view in sync - more on Flux soon.
 
 # Components
-In React you can create components that have special functionality that you won't find in a HTML element, i.e. a dropdown navigation, which we will be creating in this tutorial. Each component is contained in it's own "scope", so we can define the functionality of the component and reuse it as many times as we want without them interfering with each other.
+In React you can create components that have special functionality that you won't find in a HTML element, i.e. a dropdown navigation, which we will be creating in this tutorial. Each component is contained in its own "scope", so we can define the functionality of the component and reuse it as many times as we want without them interfering with each other.
 
 Each component has a `render` function, which effectively returns the HTML that the component will render in the browser. We can call other React component's too, meaning the possibilities are endless!
 
@@ -114,7 +114,7 @@ React.render(<Navigation config={ navigationConfig } />, document.body);
 If we were to access `this.props.config` now, we could receieve an empty array (the value of `navigationConfig`). Before we move on to actually coding the navigation, let's talk about state.
 
 ###State
-As previously discussed, each component has it's own "state". When using state, you define an initial state and then you can update the state using `this.setState`. Whenever the state is updated, the component will call the `render` function again, and replace/change the difference between the previous render value and the new one. This is where the virtual DOM kicks in - the difference algorithm is done internally in React, so we don't rely on the DOM updating (as the DOM is slow). React will calculate the difference and produce a sort of instruction set of what to do (e.g. add class "active" to "navigation__link" or remove a node), and perform them on the DOM.
+As previously discussed, each component has its own "state". When using state, you define an initial state and then you can update the state using `this.setState`. Whenever the state is updated, the component will call the `render` function again, and replace/change the difference between the previous render value and the new one. This is where the virtual DOM kicks in - the difference algorithm is done internally in React, so we don't rely on the DOM updating (as the DOM is slow). React will calculate the difference and produce a sort of instruction set of what to do (e.g. add class "active" to "navigation__link" or remove a node), and perform them on the DOM.
 
 With our navigation we are going to keep what dropdown is currently open in the state. To do this, we add a `getInitialState` function to the class configuration object, and return an object with the initial state we want.
 
@@ -304,7 +304,7 @@ var AnotherComponent = React.createClass({
 Both of these components will have the same `componentDidMount` and `componentWillUnmount` functions, saving us rewriting the code. However, you cannot override these properties, if a property is set in a mixin, it can't be overriden in the component.
 
 ##Loop de loop
-As we have an array of objects, we need to somehow loop through the array and render a list item for each one. As JSX allows you to use it where ever you want in your Javascript files, you can map the array and return JSX in it's place, and then pass it through to React to render.
+As we have an array of objects, we need to somehow loop through the array and render a list item for each one. As JSX allows you to use it where ever you want in your Javascript files, you can map the array and return JSX in its place, and then pass it through to React to render.
 
 {% highlight js %}
 var navigationConfig = [
@@ -542,4 +542,4 @@ We can now add many more items to our `navigationConfig` and add some styling to
 
 # Conclusion
 
-React is a super easy framework to get into. It's simplistic API allows you to quickly make your components without any thought of manipulating the DOM or doing complex operations for repeating lists, etc. If you need any help at all, feel free to tweet me <a href="http://twitter.com/rynclark" target="_blank">@rynclark</a>. Thanks for reading!
+React is a super easy framework to get into. Its simplistic API allows you to quickly make your components without any thought of manipulating the DOM or doing complex operations for repeating lists, etc. If you need any help at all, feel free to tweet me <a href="http://twitter.com/rynclark" target="_blank">@rynclark</a>. Thanks for reading!
