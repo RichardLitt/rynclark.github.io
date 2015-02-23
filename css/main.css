@@ -2002,6 +2002,9 @@ pre {
 img {
   max-width: 100%; }
 
+.twitter-follow-button {
+  margin-top: 20px; }
+
 @media only screen and (max-width: 1000px) {
   .sidebar {
     position: static;
