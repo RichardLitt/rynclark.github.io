@@ -391,7 +391,7 @@ messagesStore.dispatchToken = Dispatcher.register(function (payload) {
 
 	var actions = {
 		updateOpenChatID: function (payload) {
-			openChatID = payload.userID;
+			openChatID = payload.action.userID;
 
 			messagesStore.emit('change');
 		}
